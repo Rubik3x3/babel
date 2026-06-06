@@ -19,8 +19,8 @@ PAGE_LEN = 3200 # 40 renglones de 80 caracteres cada uno
 N = BASE ** PAGE_LEN
 WALLS, SHELVES, VOLUMES, PAGES = 4, 5, 32, 410
 
-# Constantes del cifrado afin. Solo tienen que ser coprimas con N, es decir
-# no ser multiplos de 29.
+# Constantes del cifrado afin. MULT tiene que ser coprimo con N (o sea, no
+# multiplo de 29) para poder invertirlo; OFFSET puede ser cualquier numero.
 MULT = 982451653
 OFFSET = 472882049
 assert gcd(MULT, N) == 1
